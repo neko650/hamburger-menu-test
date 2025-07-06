@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  width: 75%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+.nav-menu.open {
+  transform: translateX(0);
+}
+
+.nav-content {
+  padding: 2rem;
+}
+
+.nav-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-content li {
+  margin-bottom: 1.5rem;
+}
+
+.nav-content a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  float: right;
+  cursor: pointer;
+}
+
+/* モバイル表示用 */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
