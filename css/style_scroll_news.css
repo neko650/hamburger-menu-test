@@ -325,17 +325,3 @@ html {
 html {
   scroll-padding-top: 80px;
 }
-
-
-/* メニューが開いているときに body のスクロールを無効化 */
-body.menu-open {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
-
-/* スマホ用：nav-menu をスクロール可能にする */
-.nav-menu {
-  max-height: 80vh;
-  overflow-y: auto;
-}
